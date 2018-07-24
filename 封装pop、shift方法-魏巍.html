@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //shift
+    var ary = [1,2,3,4,5,6,7];
+    Array.prototype.shift1=function () {
+        var ary1 = [];
+        var a = this[0];
+        for (var i = 1;i<this.length-1;i++){
+            ary1.push(this[i])
+            /*ary1[ary1.length]=this[i];*/
+        }
+        for (var j = 0;j<ary1.length-1;j++){
+            this[j]=ary1[j]
+        }
+        return a
+    };
+    console.log(ary.shift1(),ary);
+
+
+
+    //pop
+    Array.prototype.pop1 = function () {
+        var last = this[this.length-1];
+        delete this[this.length-1];
+        return last;
+    }
+    var ary = [1,2,3,4];
+    console.log(ary.pop1());
+    console.log(ary);
+
+
+</script>
